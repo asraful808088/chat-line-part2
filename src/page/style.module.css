@@ -1,0 +1,32 @@
+.root {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background: url("../assets/bg/bg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+}
+.root .items {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.root .items .card {
+  height: 600px;
+  width: 450px;
+  position: relative;
+}
+@media only screen and (max-width: 900px) {
+  .root .items {
+    width: 100%;
+    position: absolute;
+  }
+  .root .items:nth-child(2){
+    z-index: 11;
+  }
+}

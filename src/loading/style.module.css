@@ -1,0 +1,56 @@
+.root {
+}
+
+.root .item {
+  height: 90%;
+  width: 90%;
+  z-index: 3;
+  position: relative;
+  left: 20%;
+}
+.root .item:nth-child(2) {
+  top: -50%;
+  left: 0%;
+  height: 60%;
+  width: 60%;
+}
+.root .item .image {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transform: translateY(0%);
+  animation: anim2 10s infinite;
+}
+.root .item:nth-child(2) .image{
+    animation: anim2 10s infinite 1s; 
+}
+.root .item .shadow {
+  height: 10%;
+  width: 100%;
+  transform: scale(1);
+  background: radial-gradient(rgba(0, 0, 0, 0.295), transparent);
+  border-radius: 100%;
+
+  animation: anim1 10s infinite;
+}
+.root .item:nth-child(2) .shadow{
+    animation: anim1 10s infinite 1s;
+}
+@keyframes anim2 {
+    0%,
+    100% {
+        transform: translateY(0%);
+    }
+    50% {
+        transform: translateY(-50%);
+    }
+  }
+@keyframes anim1 {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(.5);
+  }
+}

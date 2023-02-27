@@ -1,7 +1,8 @@
 import "./App.css";
-import Index from "./page";
+// import Index from "./page";
+import Admin from "./page/admin/main/main";
 function App() {
-  return <Index />;
+  return <Admin />;
 }
 
 export default App;

@@ -1,0 +1,26 @@
+.root {
+  height: 400px;
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.root h1 {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+@media only screen and (max-width: 1200px) {
+  .root {
+    width: 100%;
+  }
+  .root h1{
+    font-size: 18px;
+  }
+}

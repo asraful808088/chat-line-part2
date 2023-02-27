@@ -1,0 +1,281 @@
+.root {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: 300px;
+  background-image: linear-gradient(
+    to left,
+    rgb(0, 132, 255),
+    rgb(0, 204, 255)
+  );
+}
+.root .logo {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.root .logo .navClose {
+  top: 20px;
+  right: 20px;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  display: none;
+}
+.root .cardBox {
+  grid-column-start: 4;
+  grid-column-end: -1;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.root .cardBox .navOpen {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  z-index: 111;
+  top: 20px;
+  left: 20px;
+  display: none;
+}
+.root .cardBox .card {
+  width: 350px;
+  height: 200px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  border-top: 2px solid rgb(185, 185, 185);
+  border-left: 2px solid rgb(185, 185, 185);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  display: flex;
+}
+.root .cardBox .card .cardItems {
+  width: 50%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.root .cardBox .card .cardItems .count {
+  font-size: 30px;
+  color: gray;
+}
+.root .cardBox .card .cardItems .name {
+  font-size: 30px;
+  color: gray;
+}
+.root .menu {
+  grid-row-start: 2;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.root .menu .header {
+  height: 50px;
+  margin: 0;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: azure;
+}
+.root .menu .items {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.root .menu .items .item {
+  width: 250px;
+  height: 50px;
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  background-color: aliceblue;
+  border-radius: 10px;
+  align-items: center;
+  padding: 5px;
+  transition: 0.5s;
+}
+.root .menu .items .item:hover {
+  transform: scale(0.98);
+}
+.root .menu .items .item .icon {
+  height: 35px;
+  min-width: 35px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.root .menu .items .item .name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  cursor: pointer;
+}
+.root .details {
+  grid-row-start: 2;
+  grid-column-start: 4;
+  grid-column-end: -1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.root .details .header {
+  height: 50px;
+  margin: 0;
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: azure;
+}
+.root .details .DeItems {
+  width: 90%;
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.root .details .DeItems .item {
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  width: 100%;
+}
+@media only screen and (max-width: 1400px) {
+  .root .logo {
+    grid-column-end: 5;
+  }
+  .root .cardBox {
+    grid-column-start: 5;
+  }
+  .root .cardBox .card {
+    width: 250px;
+    height: 150px;
+  }
+  .root .cardBox .card .cardItems .count {
+    font-size: 25px;
+  }
+  .root .cardBox .card .cardItems .name {
+    font-size: 22px;
+  }
+  .root .menu {
+    grid-column-end: 5;
+  }
+  .root .details {
+    grid-column-start: 5;
+  }
+  .root .menu .items .item {
+    width: 200px;
+  }
+}
+@media only screen and (max-width: 1050px) {
+  .root .logo {
+    grid-column-end: 5;
+  }
+  .root .cardBox {
+    grid-column-start: 5;
+  }
+  .root .cardBox .card {
+    width: 190px;
+    height: 120px;
+  }
+  .root .cardBox .card .cardItems .count {
+    font-size: 18px;
+  }
+  .root .cardBox .card .cardItems .name {
+    font-size: 18px;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .root .logo {
+    grid-row-start: 1;
+    grid-column-end: 8;
+    background-color: rgb(0, 132, 255);
+    z-index: 1111;
+    transform: translateX(-100%);
+    transition: 0.5s;
+    position: fixed;
+    width: 300px;
+    height: 300px;
+  }
+  .root .cardBox {
+    grid-row-start: 1;
+    grid-column-start: 1;
+  }
+  .root .logo .navClose {
+    display: flex;
+    cursor: pointer;
+  }
+  .root .cardBox .navOpen {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+  }
+  .root .menu {
+    grid-column-end: 8;
+    z-index: 1;
+    background-color: rgb(0, 132, 255);
+    transform: translateX(-100%);
+    transition: 0.5s;
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    top: 300px;
+  }
+  .root .menu .items .item {
+    width: 250px;
+  }
+  .root .details {
+    grid-column-start: 1;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .root {
+    grid-template-rows: auto;
+  }
+  .root .logo {
+    grid-row-start: 1;
+    grid-column-end: 14;
+  }
+  .root .menu {
+    grid-column-end: 14;
+  }
+  .root .cardBox {
+    flex-direction: column;
+  }
+  .root .cardBox .card {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    min-width: 290px;
+    min-height: 150px;
+  }
+}

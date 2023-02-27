@@ -32,8 +32,10 @@ export default function FileUpload({ onchange, error }) {
             type="file"
             id="file"
             onChange={(e) => {
-              setCrossActive(true);
-              setFileName(e.target.files[0].name);
+              if (e.target.files[0]) {
+                setCrossActive(true);
+                setFileName(e.target.files[0].name);
+              }
               if (onchange) {
                 onchange(e.target.files[0]);
               }
